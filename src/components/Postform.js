@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createPost } from '../actions/postActions';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 class PostForm extends Component {
   constructor(props) {
@@ -32,31 +33,28 @@ class PostForm extends Component {
   render() {
     return (
       <div>
-        <h1>Add Post</h1>
-        <form onSubmit={this.onSubmit}>
-          <div>
-            <label>Title: </label>
-            <br />
-            <input
+        <h1>Add A New Post</h1>
+        <Form onSubmit={this.onSubmit}>
+          <FormGroup className="col-md-6">
+            <Label>Title: </Label>
+            <Input
               type="text"
               name="title"
               onChange={this.onChange}
               value={this.state.title}
             />
-          </div>
-          <br />
-          <div>
-            <label>Body: </label>
-            <br />
-            <textarea
+          </FormGroup>
+          <FormGroup className="col-md-6">
+            <Label>Body: </Label>
+            <Input type="textarea"
               name="body"
               onChange={this.onChange}
               value={this.state.body}
             />
-          </div>
+          </FormGroup>
           <br />
-          <button type="submit">Submit</button>
-        </form>
+          <Button color="success" type="submit">Submit</Button>
+        </Form>
       </div>
     );
   }

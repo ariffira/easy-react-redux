@@ -21,13 +21,6 @@ class App extends Component {
         </div>
       </Provider>
     );
-    /*
-    return (
-        <div className="container">
-          <Header tagline={"Here are all the next tasks"}/>
-          <TodoList/>
-        </div>
-    );*/
   }
 }
 
