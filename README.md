@@ -11,3 +11,6 @@ npm install
 # Serve on localhost:3000
 npm start
 ```
+
+## here is the link
+https://ariffira.github.io/easy-react-redux/
